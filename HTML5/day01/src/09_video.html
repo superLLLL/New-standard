@@ -1,0 +1,56 @@
+<!--
+ * @Description: 
+ * @Email: 17625121225@163.com
+ * @Company: root
+ * @Author: Xuhua
+ * @Date: 2019-09-16 15:24:24
+ * @LastEditors: Xuhua
+ * @LastEditTime: 2019-09-16 20:28:44
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>HTML5新特性--视频播放</h3>
+    <video id="v1" src="res/x.mp4" controls
+            preload="metadata" 
+            poster="res/ad.png"
+            >您的浏览器版本太低了吧！</video>
+    <script>
+        var video =document.getElementById('v1');
+        video.volume = 0.1;
+        video.playbackRate = 0.3;
+    </script>
+</body>
+</html>
+
+<!--
+    autoplay [false] 是否自动播放视频
+    controls [false] 是否显示播放控件
+    loop     [false] 是否循环播放
+    muted    [false] 是否静音播放
+    poster:""         在播放第一帧画布之前显示海报
+    preload:          预加载策略
+        auto:         预加载视频元素数据和一定缓冲时长
+        metadata:     预加载视频元数据
+        none：        不预加载元数据
+
+    -video js对象常用成员
+    volume:1 当前音量
+    playbackRate:1 播放速率
+    paused:true  当前视频处于暂停状态
+
+    -video js对象常用方法
+    play()      播放视频
+    pause()     暂停播放
+    
+    -video js对象常用事件
+    onplay      当视频开始播放时触发
+    onpause     当视频暂停时触发
+
+-->

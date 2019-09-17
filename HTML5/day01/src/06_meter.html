@@ -1,0 +1,35 @@
+<!--
+ * @Description: 
+ * @Email: 17625121225@163.com
+ * @Company: root
+ * @Author: Xuhua
+ * @Date: 2019-09-16 13:28:09
+ * @LastEditors: Xuhua
+ * @LastEditTime: 2019-09-16 13:47:46
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>html5 - 刻度尺
+    </h3>
+    当月薪水
+    <meter id='m1' min="0" max="100000" low="1000" high="90000" optimum="99999" value="2000"></meter>
+
+    <script>
+        var meter = document.getElementById('m1');
+        var v= 0;
+        var timer = setInterval(() => {
+            v += 1500;
+            meter.value = v;
+            if(v > 99999){clearInterval(timer)}
+        }, 100);
+    </script>
+
+</body>
+</html>

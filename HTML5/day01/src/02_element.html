@@ -1,0 +1,70 @@
+<!--
+ * @Description: 
+ * @Email: 17625121225@163.com
+ * @Company: root
+ * @Author: Xuhua
+ * @Date: 2018-11-06 12:02:14
+ * @LastEditors: Xuhua
+ * @LastEditTime: 2019-09-15 18:35:12
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+     <!--进度条分页条-->
+     <div id="app">
+        <el-progress :percentage="0"></el-progress>
+        <el-progress :percentage="50"></el-progress>
+        <el-progress :percentage="70"></el-progress>
+        <el-progress :percentage="100" status="success"></el-progress>
+        <el-progress :percentage="30" status="exception"></el-progress>
+        <el-progress :percentage="40" type="circle" status="exception"></el-progress>
+
+        
+        <!-- 分页 分条 -->
+        <div class="block">
+          <!-- 上一页 当前页 下一页 -->
+          <el-pagination layout="prev,pager,next" :total="50" :page-size="10"></el-pagination>
+        </div>
+        <div class="block">
+          <el-pagination layout="prev,pager,next" :total="1000" :page-size="20"></el-pagination>
+        </div>
+        <div class="block">
+          <el-pagination
+            layout ="prev,pager,next"
+            :total="1000"
+            :page-size="20"
+            :pager-count="11"
+          ></el-pagination>
+        </div>
+
+
+        <!-- z下拉菜单 -->
+        <el-dropdown>
+          <span class="el-dropdown-link">
+            下拉菜单
+            <i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>鱼香肉丝</el-dropdown-item>
+            <el-dropdown-item>油焖茄子</el-dropdown-item>
+            <el-dropdown-item>油爆大虾</el-dropdown-item>
+            <el-dropdown-item>清蒸鲈鱼</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+        
+
+     </div>
+     <script>
+       new Vue({
+          el:"#app",
+          data:function(){return {}}
+       })
+     </script>
+</body>
+</html>

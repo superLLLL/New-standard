@@ -1,0 +1,38 @@
+<!--
+ * @Description: 
+ * @Email: 17625121225@163.com
+ * @Company: root
+ * @Author: Xuhua
+ * @Date: 2019-09-15 18:41:55
+ * @LastEditors: Xuhua
+ * @LastEditTime: 2019-09-15 18:57:14
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>HTML5 新特性滚动条 progress </h3>
+    <!-- 左右滚动 -->
+    <progress></progress>
+    <hr>
+    <!-- 固定值进度条 -->
+    <progress value="0.6"></progress>
+    <hr>
+    <!-- 使用定时器+进度条 实现一个可以实现动态进度值的进度条 -->
+    <progress id="pro" value="0"></progress>
+    <script>
+        var progress = document.getElementById('pro');
+        var v = 0;  //用数值来临时保存value,不会出现类型错误的问题
+        var time = setInterval(() => {
+            v += 0.1;
+            progress.value = v;
+            if(v > 0.9) clearInterval(time);
+        }, 500);
+    </script>
+</body>
+</html>
