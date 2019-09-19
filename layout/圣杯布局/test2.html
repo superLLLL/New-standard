@@ -1,0 +1,62 @@
+<!--
+ * @Description: 
+ * @Email: 17625121225@163.com
+ * @Company: root
+ * @Author: Xuhua
+ * @Date: 2019-09-14 15:50:11
+ * @LastEditors: Xuhua
+ * @LastEditTime: 2019-09-19 19:29:47
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>浮动布局</title>
+     <style>
+         header,footer{
+             height: 40px;
+             width: 100%;
+             background: red;
+         }
+         footer{
+             clear: both;
+         }
+         .container{
+             padding-left: 200px;
+             padding-right: 300px;
+         }
+         .container section{   /*重点在此*/
+             position: relative;
+             float: left;
+         }
+         .center{
+             width: 100%;
+             background: yellow;
+         }
+         .left{
+             width: 200px;
+             background: pink;
+             margin-left: -100%;  /*让其坍塌到和center同行*/
+             right: 200px;        /*推到container的内边距中*/
+         }
+         .right{
+             width: 300px;
+             background: aqua;
+             margin-right: -200px;  /*right直接推到container内边距中即可*/
+         }
+     </style>
+ </head>
+ <body>  
+     <header >...</header>
+        <div class="container">
+            <section class="center">#center</section>
+            <section class="left">#left</section>
+            <section class="right">#right</section>
+        </div>
+     <footer>...</footer>
+    
+ 
+ </body>
+ </html>

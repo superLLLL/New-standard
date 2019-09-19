@@ -1,0 +1,53 @@
+<!--
+ * @Description: 
+ * @Email: 17625121225@163.com
+ * @Company: root
+ * @Author: Xuhua
+ * @Date: 2019-09-14 15:50:11
+ * @LastEditors: Xuhua
+ * @LastEditTime: 2019-09-19 19:28:02
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flexBox 弹性盒子实现</title>
+    <style>
+                
+        .header,.footer{
+            height:40px;
+            width:100%;
+            background:red;
+        }
+        .container{
+            display: flex;  /*定义flex弹性布局*/
+            /* display:inline-flex;  section内联使用 */
+        }
+        .middle{
+            flex-grow: 1;   /*将middle设置为占container全部的宽度*/
+            background:yellow;
+        }
+        .left{
+            width:200px;
+            background:pink;
+        }
+        .right{
+            background: aqua;
+            width:300px;
+        }
+    </style>
+</head>
+<body>  
+        <div class="header">这里是头部</div>
+        <div class="container">
+            <div class="left">左边</div>
+            <div class="middle">中间部分</div>
+            <div class="right">右边</div>
+        </div>
+        <div class="footer">这里是底部</div>
+    
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!--
+ * @Description: 
+ * @Email: 17625121225@163.com
+ * @Company: root
+ * @Author: Xuhua
+ * @Date: 2019-09-14 15:50:11
+ * @LastEditors: Xuhua
+ * @LastEditTime: 2019-09-19 19:58:57
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Grid布局</title>
+     <style>
+        /* .container{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "head head head"
+            "left middle right"
+            "foot foot foot"
+        } */
+
+        .container{
+            display: grid;    /*父元素设置grid*/
+            grid-template:    /*划分地区*/
+                "head head head" 1fr
+                "left middle right"1fr
+                "foot foot foot" 1fr
+                /1fr 1fr 1fr
+        }
+        #header{
+            grid-area: head;   /*引用相应名字的grid*/
+            background: red;
+        }
+            
+        #left{
+            grid-area: left;
+            background: orange;
+        }
+        #right{
+            grid-area: right;
+            background: cadetblue;
+        }
+        #middle{
+            grid-area: middle;
+            background: rebeccapurple
+        }
+        #footer{
+            grid-area: foot;
+            background: gold;
+
+        }
+     </style>
+ </head>
+ <body>  
+
+    <!--grid网格 会把页面划分为一个个网格，和围棋的棋盘一样，所以页面无需多余的排列-->
+    <div class="container">
+        <div id="header">header</div>
+        <div id="left">left</div>
+        <div id="middle">middle</div>
+        <div id="right">right</div>     
+        <div id="footer">footer</footer></div>
+    </div>
+
+
+ </body>
+ </html>
